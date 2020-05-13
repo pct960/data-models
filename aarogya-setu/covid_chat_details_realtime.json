@@ -1,0 +1,132 @@
+{
+	"@context"	: {"csvw" : "http://www.w3.org/ns/csvw"},
+	"@type"		: "csvw:Schema",
+
+	"dc:title"	: "Realtime chat data of Aarogya Setu users",
+
+	"tableSchema"	: {
+
+		"@type"		: "csvw:tableSchema",
+		"columns"	: [
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "key",
+				"dc:description": "Primary key of the record comprising timestamp and device ID",
+				"datatype"	: "json",
+				"required"	: true
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "created_on",
+				"dc:description": "Timestamp of the chat",
+				"datatype"	: {"base": "date", "format": "YYYY-MM-DD HH:mm:ss"},
+				"required"	: false
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "did",
+				"dc:description": "Unique device ID the chat belongs to",
+				"datatype"	: "string", 
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "age",
+				"dc:description": "Age of the user",
+				"datatype"	: "integer",
+				"required"	: false
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "gender",
+				"dc:description": "Gender of the user",
+				"datatype"	: "string", 
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "lat",
+				"dc:description": "Latitude of the user's location. Adaptively gridded depending on number of users in their vicinity for the particular day",
+				"datatype"	: "float", 
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "lon",
+				"dc:description": "Longitude of the user's location. Adaptively gridded depending on number of users in their vicinity for the particular day",
+				"datatype"	: "float",
+				"required"	: false
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "past",
+				"dc:description": "Details of any co-morbidities",
+				"datatype"	: "string",
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "social",
+				"dc:description": "Details of potential exposure to covid-19 patients. E.g. Travelled internationally, frontline worker etc.",
+				"datatype"	: "string", 
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "social_when",
+				"dc:description": "Details how long ago the potential exposure to covid-19 happened",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "status",
+				"dc:description": "The ICMR category the user belongs to. E.g. eligible, eligible_suspect, not_eligible, quarantine, unwell and great",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "symptom_past",
+				"dc:description": "Details of any past or pre-existing symptoms",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "symptom_past_travel_social",
+				"dc:description": "Details of potential exposure to covid-19 patients. E.g. Travelled internationally, frontline worker etc.",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "symptoms",
+				"dc:description": "Details of existing symptoms",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "travel",
+				"dc:description": "Whether the person has travelled recently",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "day",
+				"dc:description": "Day on which the chat was recorded",
+				"datatype"	: {"base": "date", "format": "YYYY-MM-DD"}, 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "confirm",
+				"dc:description": "Whether the person agreed to send the details to Government of India",
+				"datatype"	: "string", 
+				"required"	: true 
+			}
+    		]
+	}
+}

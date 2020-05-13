@@ -1,0 +1,174 @@
+{
+	"@context"	: {"csvw" : "http://www.w3.org/ns/csvw"},
+	"@type"		: "csvw:Schema",
+
+	"dc:title"	: "Master Line List of bangalore covid 19 patients",
+
+	"tableSchema"	: {
+
+		"@type"		: "csvw:tableSchema",
+		"columns"	: [
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Sl. No",
+				"dc:description": "Serial number of the record",
+				"datatype"	: "integer",
+				"required"	: true
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "State Patient ID",
+				"dc:description": "ID of the covid-19 positive patient maintained by the State of Karnataka",
+				"datatype"	: "string",
+				"required"	: true
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Age",
+				"dc:description": "Age of the covid-19 positive patient",
+				"datatype"	: "integer",
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Age group",
+				"dc:description": "Age group to which the covid positive patient belongs to",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Gender",
+				"dc:description": "Gender of the covid positive patient",
+				"datatype"	: "string",
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "RESIDENTIAL ZONES",
+				"dc:description": "The residential area to which the covid positive patient belongs to",
+				"datatype"	: "string",
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Ward Number",
+				"dc:description": "Ward number of the residential zone",
+				"datatype"	: "integer", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Ward Name",
+				"dc:description": "Specific name of the ward",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "District",
+				"dc:description": "The district name to which the ward belongs",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Hospitalization at",
+				"dc:description": "The hospital where the covid positive patient was admitted",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "HOSPITAL ZONES",
+				"dc:description": "The zone to which the hospital belongs to",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Date of Hospitalization",
+				"dc:description": "The date on which the covid positive patient was admitted to the hospital",
+				"datatype"	: {"base": "date", "format": "YYYY-MM-DD"}, 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Date of sample collection",
+				"dc:description": "Date on which samples from the covid positive patient was collected for testing",
+				"datatype"	: {"base": "date", "format": "DD.MM.YYYY"}, 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "name of the testing lab",
+				"dc:description": "The lab where the samples collected from the covid positive patient were tested",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Result",
+				"dc:description": "Result of the covid-19 test",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Date of identification",
+				"dc:description": "Date on which the patient was diagnosed as covid positive",
+				"datatype"	: {"base": "date", "format": "DD/MM/YYYY"}, 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Isolation days",
+				"dc:description": "Number of days the patient was isolated",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Transmission Type",
+				"dc:description": "How the patient came in contact with the virus",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Travel History/ name of Country/City",
+				"dc:description": "Details of travel to the affected country or details of contact with another covid positive patient",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Date of travel",
+				"dc:description": "Date on which the patient travelled to the said country",
+				"datatype"	: {"base": "date", "format": "DD/MM/YYYY"}, 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Date of arrival to India",
+				"dc:description": "Date on which the patient arrived in India",
+				"datatype"	: {"base": "date", "format": "DD/MM/YYYY"}, 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Current Status",
+				"dc:description": "Current status of the patient",
+				"datatype"	: "string", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Discharge/Death date",
+				"dc:description": "Date on which the patient was discharged or died",
+				"datatype"	: {"base": "date", "format": "DD/MM/YYYY"}, 
+				"required"	: true 
+			}
+    		]
+	}
+}

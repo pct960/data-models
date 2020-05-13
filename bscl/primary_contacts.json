@@ -1,0 +1,76 @@
+{
+	"@context"	: {"csvw" : "http://www.w3.org/ns/csvw"},
+	"@type"		: "csvw:Schema",
+
+	"dc:title"	: "Primary contact list of covid-19 patients in Bangalore",
+
+	"tableSchema"	: {
+
+		"@type"		: "csvw:tableSchema",
+		"columns"	: [
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "SN",
+				"dc:description": "Serial number of the record",
+				"datatype"	: "integer",
+				"required"	: false
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "State Patient ID",
+				"dc:description": "ID of the covid-19 positive patient maintained by the State of Karnataka",
+				"datatype"	: "string",
+				"required"	: false
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Date of Identification",
+				"dc:description": "Date on which the person was identified as a potential carrier",
+				"datatype"	: {"base": "date", "format": "DD.MM.YYYY"}, 
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Primary Contacts Total",
+				"dc:description": "Total number of persons the covid-19 positive patient came in primary contact with",
+				"datatype"	: "integer",
+				"required"	: false
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Hotel Quarantine Numbers",
+				"dc:description": "Number of primary contacts quarantined in a hotel",
+				"datatype"	: "integer", 
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Hotel Quarantine Location",
+				"dc:description": "Name of the hotel in which the primary contact is quarantined",
+				"datatype"	: "string", 
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Institutional Quarantine Numbers",
+				"dc:description": "Number of primary contacts quarantined in hospitals",
+				"datatype"	: "integer",
+				"required"	: false
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Institutional Quarantine Location",
+				"dc:description": "Name of the hospital in which the primary contact is quarantined",
+				"datatype"	: "string",
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Remarks",
+				"dc:description": "Remarks about the primary contact",
+				"datatype"	: "string", 
+				"required"	: false 
+			}
+    		]
+	}
+}

@@ -1,0 +1,55 @@
+{
+	"@context"	: {"csvw" : "http://www.w3.org/ns/csvw"},
+	"@type"		: "csvw:Schema",
+
+	"dc:title"	: "Secondary contact list of covid-19 patients in Bangalore",
+
+	"tableSchema"	: {
+
+		"@type"		: "csvw:tableSchema",
+		"columns"	: [
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "SN",
+				"dc:description": "Serial number of the record",
+				"datatype"	: "integer",
+				"required"	: false
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "State Patient ID",
+				"dc:description": "ID of the covid-19 positive patient maintained by the State of Karnataka",
+				"datatype"	: "string",
+				"required"	: false
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Date Of Identification",
+				"dc:description": "Date on which the person was identified as a potential carrier",
+				"datatype"	: {"base": "date", "format": "DD.MM.YYYY"}, 
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Secondary Contacts Total",
+				"dc:description": "Total number of persons the covid-19 positive patient came in secondary contact with",
+				"datatype"	: "integer",
+				"required"	: false
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Stamping",
+				"dc:description": "Whether the secondary contact was stamped for quarantine identification",
+				"datatype"	: "string", 
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Home Quarantine",
+				"dc:description": "Whether the secondary contact has been quarantined at home",
+				"datatype"	: "string", 
+				"required"	: false 
+			}
+    		]
+	}
+}
