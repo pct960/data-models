@@ -1,0 +1,104 @@
+{
+	"@context"	: {"csvw" : "http://www.w3.org/ns/csvw"},
+	"@type"		: "csvw:Schema",
+
+	"dc:title"	: "Data request - Case summary",
+
+	"tableSchema"	: {
+
+		"@type"		: "csvw:tableSchema",
+		"columns"	: [
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "State",
+				"dc:description": "Name of city/district",
+				"datatype"	: "string",
+				"required"	: true
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "District",
+				"dc:description": "city/district",
+				"datatype"	: "string",
+				"required"	: true
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Ward/block name",
+				"dc:description": "Name of the ward (if city) or block (if reporting body is a district) for which details are being provided",
+				"datatype"	: "string",
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Ward number",
+				"dc:description": "Ward number for which details are being provided",
+				"datatype"	: "integer",
+				"required"	: false 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Date",
+				"dc:description": "Date, update daily",
+				"datatype"	: {"base": "date", "format": "dd/mm/yyyy"},
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Total cases",
+				"dc:description": "cumulative cases in the region upto the date specified",
+				"datatype"	: "integer", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Active cases",
+				"dc:description": "number of active cases as on date",
+				"datatype"	: "integer", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Mild cases (isolated)",
+				"dc:description": "number of active cases who are isolated in facilities, as on date",
+				"datatype"	: "integer", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Moderate cases (hospitalized)",
+				"dc:description": "number of active cases who are currently hospitalized  or in covid health care centers",
+				"datatype"	: "integer", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Severe cases (In ICU)",
+				"dc:description": "number of active cases who are in intensive care units as on date",
+				"datatype"	: "integer", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Critical cases (ventilated patients)",
+				"dc:description": "number of active cases who are currently on ventilators as on date",
+				"datatype"	: "integer", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Recovered cases",
+				"dc:description": "cumulative number of recovered cases as on date",
+				"datatype"	: "integer", 
+				"required"	: true 
+			},
+			{
+				"@type"		: "csvw:Column",
+				"name"		: "Fatalities",
+				"dc:description": "cumulative number of fatalities as on date",
+				"datatype"	: "integer", 
+				"required"	: true 
+			}
+    		]
+	}
+}
