@@ -1,5 +1,5 @@
 {
-	"@context"	: {"csvw" : "http://www.w3.org/ns/csvw"},
+	"@context"	: {"csvw" : "http://www.w3.org/ns/csvw", "dc":"http://purl.org/dc/terms/"},
 	"@type"		: "csvw:Schema",
 
 	"dc:title"	: "Data request - Case summary",
